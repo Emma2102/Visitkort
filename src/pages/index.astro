@@ -1,15 +1,75 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Button2 from '../components/Button2.astro';
+import Text from '../components/Text.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+<MainLayout title="Visitkort">
+
+<main class="bg-primary-300">
+
+	<section class="relative bg-primary-500 grid justify-center justify-items-center pt-40">
+		<div class=" text-3xl text-primary-300 font-dmsans z-10 relative"><p>Hello I´m</p></div>
+		<div class="text-[200px] md:text-[400px] text-primary-300 font-anton z-0 -mt-10"><h1>EMMA</h1></div>
+		<div class="relative z-10 -mt-110"><img src="MIG.png" alt="MIG" width="450"></div>
+		<div class="text-5xl text-primary-300 font-anton relative z-20 -mt-40"><h1>Graphic Designer</h1></div>
+<div class="relative z-10 -mt-30"> <img src="/src/assets/images/down.png" width="240"/></div>
+	</section>
+
+	<section class="m-30 grid grid-cols-2">
+		<div class=" text-primary-500">
+			 <h1 class="text-5xl font-anton">Kreativitet med øje for detaljen</h1>
+			<p class="text-2xl pt-4 pb-4 font-dmsans leading-10">Min kreative tankegang giver mig et skarpt øje for detaljer, som jeg bruger til at udvikle unikke og visuelt stærke designs.</p>
+		<Button>Læs mere om mig</Button>
+		</div>
+		<div> </div>
+	</section>
+
+	<section class=" bg-sekunary-300 pt-0.5 pb-0.5">
+		<div class="mr-30 ml-30 mt-20 mb-20">
+		<div class="text-5xl text-sekundary-500 font-anton pb-10"><h1>Mine værktøjer</h1></div>
+		<div class="grid grid-cols-4 gap-5">
+	 <Button2>HTML</Button2>
+	  <Button2>Adobe illustrator</Button2>
+	   <Button2>Visual studio code</Button2>
+	    <Button2>JavaScript</Button2>
+		 <Button2>CSS</Button2>
+		  <Button2>Adobe Premiere Pro</Button2>
+		   <Button2>Adobe After Effects</Button2>
+		     <Button2>Astro</Button2>
+			   <Button2>Adobe InDesign</Button2>
+			     <Button2>Figma</Button2>
+	 </div> </div>
+
+	</section>
+
+	<section class="m-30 grid grid-cols-2">
+		<div> <h1 class="font-anton text-5xl text-primary-500 pt-8">Hvem er jeg?</h1>
+		<p class="text-2xl text-primary-500 pt-4 pb-4 pr-20 font-dmsans leading-10">Jeg er multimediedesign-studerende med en passion for at skabe digitale løsninger, der kombinerer æstetik og funktionalitet. Jeg arbejder med både design og udvikling og brænder for at lære nyt, eksperimentere med ideer og udvikle kreative koncepter, der giver værdi for brugeren. Som studerende er jeg nysgerrig, åben og klar til at udvikle mig gennem praksis og samarbejde.</p></div>
+		<div class="bg-primary-500 font-anton text-5xl text-primary-300 pt-8 p-23"> 
+			<h1 class="pb-5">Hobbies</h1>
+			<section class="grid grid-cols-3 gap-8">
+		<div><img src="/src/assets/images/paint.png" width="100"></div>
+		<div><img src="/src/assets/images/draw.png" width="100"></div>
+		<div><img src="/src/assets/images/crochet.png" width="100"></div>
+		<div><img src="/src/assets/images/read.png" width="100"></div>
+		<div><img src="/src/assets/images/walk.png" width="100"></div>
+		<div><img src="/src/assets/images/music.png" width="100"></div>
+		</section>
+	 </div>
+	</section>
+
+	<section class="bg-sekunary-300 pt-0.5 pb-0.5">
+		<div class="mr-85 ml-85 mt-20 mb-20">
+			<h1 class="font-anton text-5xl text-sekundary-500 pb-2">Interesseområder</h1>
+			<Text teksttype="brødtekst">Jeg har en stor interesse for design, især grafisk design, hvor jeg kan udfolde mig kreativt med visuelle identiteter, farver og typografi. Samtidig er jeg nysgerrig på webdesign og motiveret for at lære, hvordan man skaber brugervenlige digitale løsninger, der fungerer i praksis. Jeg interesserer mig også for udvikling af indhold til sociale medier, hvor kreativitet og kommunikation kan forenes i engagerende oplevelser. Jeg ser mig selv som åben, læringsvillig og klar til at udvikle mine kompetencer inden for flere forskellige retninger af design.</Text>
+		</div>
+	</section>
+
+</main>
+
 </MainLayout>

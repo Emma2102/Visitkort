@@ -1,12 +1,35 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
+.font-anton {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-dmsans {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @theme {
   /* Her tilføjes theme variable // tokens */
+
+  /*farver*/
+  --color-primary-300: #faf9ee;
+  --color-primary-500: #a2af9b;
+  --color-sekunary-300: #dccfc0;
+  --color-sekundary-500: #736b63;
+
+  /*Fonte*/
+  --font-anton: "Anton", sans-serif;
+  --font-dmsans: "DM Sans", sans-serif;
 }
 
 @layer base {
@@ -19,9 +42,7 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }
