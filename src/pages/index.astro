@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Button2 from '../components/Button2.astro';
 import Text from '../components/Text.astro';
+import Kontakt from '../components/ConactCard.astro';
+import Sprog from '../components/SprogCard.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
@@ -12,24 +14,26 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <main class="bg-primary-300">
 
-	<section class="relative bg-primary-500 grid justify-center justify-items-center pt-40">
-		<div class=" text-3xl text-primary-300 font-dmsans z-10 relative"><p>Hello I´m</p></div>
-		<div class="text-[200px] md:text-[400px] text-primary-300 font-anton z-0 -mt-10"><h1>EMMA</h1></div>
-		<div class="relative z-10 -mt-110"><img src="MIG.png" alt="MIG" width="450"></div>
-		<div class="text-5xl text-primary-300 font-anton relative z-20 -mt-40"><h1>Graphic Designer</h1></div>
-<div class="relative z-10 -mt-30"> <img src="/src/assets/images/down.png" width="240"/></div>
+	<section id="hjem" class="relative bg-primary-500 grid justify-center justify-items-center pt-20 md:pt-40">
+		<div class="text-xl md:text-3xl text-primary-300 font-dmsans z-10 relative"><p>Hello I´m</p></div>
+		<div class="text-[200px] md:text-[400px] text-primary-300 font-anton z-0 -mb-10 lg:-mt-10"><h1>EMMA</h1></div>
+		<div class="relative z-10 -mt-30 lg:-mt-80 animate-fade-up"><img src="MIG.png" alt="MIG" class="w-108 lg:w-[400px]"></div>
+		<div class="text-5xl text-primary-300 font-anton relative z-20 -mt-50 animate-pulse"><h1>Graphic Designer</h1></div>
+		<a href="#om-mig" class="relative z-30 -mt-30 animate-bounce"> <img src="/src/assets/images/down.png" width="240"/></a>
 	</section>
 
-	<section class="m-30 grid grid-cols-2">
+	<section id="kontakt" class="m-30 lg:grid lg:grid-cols-2">
 		<div class=" text-primary-500">
-			 <h1 class="text-5xl font-anton">Kreativitet med øje for detaljen</h1>
-			<p class="text-2xl pt-4 pb-4 font-dmsans leading-10">Min kreative tankegang giver mig et skarpt øje for detaljer, som jeg bruger til at udvikle unikke og visuelt stærke designs.</p>
+			 <h1 class="text-3xl lg:text-5xl font-anton">Kreativitet med øje for detaljen</h1>
+			<p class="text-xl lg:text-2xl pt-4 pb-4 font-dmsans leading-6 lg:leading-10">Min kreative tankegang giver mig et skarpt øje for detaljer, som jeg bruger til at udvikle unikke og visuelt stærke designs.</p>
 		<Button>Læs mere om mig</Button>
 		</div>
-		<div> </div>
+		<div class="relative z-20 -mb-60 flex justify-end"> 
+		<Kontakt/>
+		</div>
 	</section>
 
-	<section class=" bg-sekunary-300 pt-0.5 pb-0.5">
+	<section id="erfaring" class=" bg-sekunary-300 pt-0.5 pb-0.5">
 		<div class="mr-30 ml-30 mt-20 mb-20">
 		<div class="text-5xl text-sekundary-500 font-anton pb-10"><h1>Mine værktøjer</h1></div>
 		<div class="grid grid-cols-4 gap-5">
@@ -47,20 +51,26 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 	</section>
 
-	<section class="m-30 grid grid-cols-2">
+	<section id="om-mig" class="m-30 grid grid-cols-2">
 		<div> <h1 class="font-anton text-5xl text-primary-500 pt-8">Hvem er jeg?</h1>
 		<p class="text-2xl text-primary-500 pt-4 pb-4 pr-20 font-dmsans leading-10">Jeg er multimediedesign-studerende med en passion for at skabe digitale løsninger, der kombinerer æstetik og funktionalitet. Jeg arbejder med både design og udvikling og brænder for at lære nyt, eksperimentere med ideer og udvikle kreative koncepter, der giver værdi for brugeren. Som studerende er jeg nysgerrig, åben og klar til at udvikle mig gennem praksis og samarbejde.</p></div>
-		<div class="bg-primary-500 font-anton text-5xl text-primary-300 pt-8 p-23"> 
+		<div class="bg-primary-500 font-anton text-5xl text-primary-300 pt-8 p-23 relative z-20 -mb-40 -mt-30"> 
 			<h1 class="pb-5">Hobbies</h1>
 			<section class="grid grid-cols-3 gap-8">
-		<div><img src="/src/assets/images/paint.png" width="100"></div>
-		<div><img src="/src/assets/images/draw.png" width="100"></div>
-		<div><img src="/src/assets/images/crochet.png" width="100"></div>
-		<div><img src="/src/assets/images/read.png" width="100"></div>
-		<div><img src="/src/assets/images/walk.png" width="100"></div>
-		<div><img src="/src/assets/images/music.png" width="100"></div>
+		<div><img src="/src/assets/images/paint.png" width="100" class="hover:scale-110 duration-300 ease-in"></div>
+		<div><img src="/src/assets/images/draw.png" width="100" class="hover:scale-110 duration-300 ease-in"></div>
+		<div><img src="/src/assets/images/crochet.png" width="100" class="hover:scale-110 duration-300 ease-in"></div>
+		<div><img src="/src/assets/images/read.png" width="100" class="hover:scale-110 duration-300 ease-in"></div>
+		<div><img src="/src/assets/images/walk.png" width="100" class="hover:scale-110 duration-300 ease-in"></div>
+		<div><img src="/src/assets/images/music.png" width="100" class="hover:scale-110 duration-300 ease-in"></div>
 		</section>
 	 </div>
+	</section>
+
+	<section>
+			<div class="m-30 relative z-20 -mt-60 -mb-30 flex justify-end pr-10">
+			<Sprog/>
+		</div>
 	</section>
 
 	<section class="bg-sekunary-300 pt-0.5 pb-0.5">
